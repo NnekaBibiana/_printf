@@ -2,8 +2,7 @@
 /**
  * _printf - print to standard output
  *
- * @format: format specifier
- * Return: no of bytes printed
+ * @format: format specifier                       * Return: no of bytes printed
  */
 int _printf(const char *format, ...)
 {
@@ -27,13 +26,11 @@ int _printf(const char *format, ...)
 		else if (format[i + 1] == 's')
 		{
 			cnt = putss(va_arg(form, char*));
-			i++;
-			count += (cnt - 1);
+			i++;                                          count += (cnt - 1);
 		}
 		else if (format[i + 1] == '%')
 		{
 			_put('%');
-
 		}
 		count++;
 
